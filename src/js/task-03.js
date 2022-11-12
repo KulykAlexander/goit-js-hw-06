@@ -1,4 +1,4 @@
-const List = document.querySelector(".gallery");
+const list = document.querySelector(".gallery");
 
 const images = [
   {
@@ -17,3 +17,11 @@ const images = [
     alt: "Group of Horses Running",
   },
 ];
+const imagesCards = images
+  .map(
+    (image) =>
+      `<li class="gallery-item"><img class"gallery-img" src=${image.url} alt=${image.alt}></li>`
+  )
+  .join("");
+
+list.insertAdjacentHTML("beforeend", imagesCards);
