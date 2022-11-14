@@ -23,16 +23,16 @@ button {
   cursor: pointer;
 }
 .gallery {
-  display: flex;
-  /* justify-content: space-between; */
+  /* display: flex;
+  justify-content: space-between;
   align-items: start;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 20px; */
   list-style: none;
   margin: 0;
 }
 .gallery-item {
-  width: calc((100%-20px * 2) / 3);
+  max-width: calc((100%-20px * 2) / 3);
 }
 .gallery-img {
   display: block;

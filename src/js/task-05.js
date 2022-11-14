@@ -1,6 +1,10 @@
 const nameInput = document.querySelector("#name-input");
 const nameOutput = document.querySelector("#name-output");
 
-nameInput.addEventListener("input", (ev) => {
-  nameOutput.textContent = ev.currentTarget.value;
-});
+function inputChange(event) {
+  nameOutput.textContent = event.currentTarget.value;
+  if (event.currentTarget.value === "") {
+    return (nameOutput.textContent = `Anonimys`);
+  }
+}
+nameInput.addEventListener("input", inputChange);
