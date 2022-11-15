@@ -1,11 +1,3 @@
-// export default
-// const user = {
-//   email,
-//   password,
-// };
-// const userEmail = document.querySelector("email");
-// const userPasswor = document.querySelector("password");
-// const btn = document.querySelector("button");
 const form = document.querySelector("form");
 
 form.addEventListener("submit", loginSubmit);
@@ -17,6 +9,12 @@ function loginSubmit(event) {
   if (email.value === "" || password.value === "") {
     return alert("Please fill in all the fields!");
   }
-  console.log(`Email: ${email.value}, Password: ${password.value}`);
+  const user = {
+    email,
+    password,
+  };
+  user.email = email.value;
+  user.password = password.value;
+  console.log(user);
   event.currentTarget.reset();
 }
