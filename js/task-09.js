@@ -6,7 +6,8 @@ const color = document.querySelector("span");
 const changeColor = document.querySelector("button");
 
 function chengeBackgroundColor() {
-  color.textContent = getRandomHexColor();
-  widget.style.backgroundColor = getRandomHexColor();
+  let randomHexColor = getRandomHexColor();
+  color.textContent = randomHexColor;
+  widget.style.backgroundColor = randomHexColor;
 }
 changeColor.addEventListener("click", chengeBackgroundColor);
